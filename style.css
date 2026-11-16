@@ -14,3 +14,42 @@ body{background:#fafbf8}nav{position:relative}header{padding-top:66px;padding-bo
 .confirmed-authors{display:flex;flex-wrap:wrap;justify-content:center;gap:9px 22px;max-width:1000px;margin:0 auto;font-size:18px;line-height:1.7;color:var(--ink)}.author-name{white-space:nowrap}.author-name sup{font-size:11px;color:var(--accent);margin-left:3px}.author-notes{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:12px;margin:12px 0 14px}.author-notes sup{color:var(--accent)}.author-block{max-width:1050px}@media(max-width:600px){.confirmed-authors{font-size:16px;gap:7px 17px}.author-notes{gap:6px 18px}}
 
 .confirmed-affiliations{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 25px;max-width:1000px;margin:14px auto 0;font-size:14px;line-height:1.7}.confirmed-affiliations span{display:inline-block}.confirmed-affiliations sup{color:var(--accent);font-size:10px;margin-right:4px}@media(max-width:600px){.confirmed-affiliations{flex-direction:column;gap:3px;font-size:13px}}
+
+
+/* Keep supporting text readable alongside the main content. */
+body { font-size: 1.125rem; }
+header h2 { font-size: clamp(1.65rem, 3.3vw, 2.625rem); }
+.confirmed-authors {
+  font-size: clamp(1.125rem, 2vw, 1.3125rem);
+  font-weight: 600;
+  gap: 0.35rem 1.4rem;
+}
+.author-name { white-space: normal; }
+.author-name sup, .confirmed-affiliations sup { font-size: 0.75em; }
+.confirmed-affiliations { font-size: clamp(1rem, 1.7vw, 1.125rem); }
+.author-notes { font-size: 0.9375rem; }
+
+nav div, .button, .text-link, summary { font-size: 1rem; }
+.eyebrow, .number, .publication, .small, .caption, footer {
+  font-size: 0.875rem;
+}
+.section-title > p, .results-heading p, .result-note p,
+.method-steps p, .release p, .metrics p { font-size: 1rem; }
+.metrics small, figcaption, .table-footnote, .resource-links small {
+  font-size: 0.9375rem;
+}
+.method-steps span, .resource-links span { font-size: 0.8125rem; }
+
+.table-scroll table {
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  min-width: 44rem;
+}
+.table-scroll thead th, .table-scroll caption { font-size: 1rem; }
+.table-scroll th small { font-size: 0.875rem; }
+.table-scroll .ours th span { font-size: 0.8125rem; }
+
+@media (max-width: 480px) {
+  nav div { flex-wrap: wrap; justify-content: center; gap: 0.5rem 0.85rem; }
+  .confirmed-authors { gap: 0.3rem 1rem; }
+}
